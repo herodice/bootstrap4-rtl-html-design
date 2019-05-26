@@ -1,0 +1,230 @@
+#section_filter {
+	@include media-breakpoint-down(sm) {
+		display: none;
+		&.mb-filter {
+			display: block;
+		}
+    }
+	.sidebar {
+		background: $white;
+		.search-filter {
+			box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+		    border-radius: 3px;
+		    background: #fff;
+		    overflow: hidden;
+		    .search-filter-header {
+		    	padding-right: 0px;
+	    		list-style: none;
+	    		margin-bottom: 0px;
+		    	.filter-item {
+		    		text-align: right;
+		    		height: 44px;
+		    		padding: 8px;
+	    			border-right: solid 5px transparent;
+	    			cursor: pointer;
+	    			border-top: solid 1px transparent;
+	    			border-bottom: solid 1px transparent;
+	    			border-left: solid 1px transparent;
+		    		&::first-child {
+		    			border-top-right: 3px;
+		    		}
+		    		&.active, &:hover {
+						background: $gray;
+						border-top: solid 1px #ddd;
+						border-bottom: solid 1px #ddd;
+						border-left: solid 1px #ddd;
+						border-right: solid 5px $primary;
+		    		}
+		    		.filter-item-icon {
+					    display: inline-block;
+					    height: 20px;
+					    margin-left: 15px;
+					    width: 20px;
+					    [class*=flicon-] {
+						    display: inline-block;
+						    width: 100%;
+						    max-width: 24px;
+						    height: 100%;
+						    max-height: 24px;
+						    fill: transparent;
+						    stroke: #4D525B;
+						    stroke-linecap: round;
+						    stroke-linejoin: round;
+						    stroke-width: 1.2px;
+						}
+					}
+		    	}
+		    }
+		    .filter-list {
+		    	list-style: none;
+		    	padding-right: 0px;
+		    	font-size: 14px;
+		    	.filter-item {
+		    		text-align: right;
+		    		.filter-item-expansion {
+		    			padding-right: 0px;
+		    			list-style: none;
+		    			max-height: 1999px;
+		    			padding: 20px 20px 0;
+		    			transition: all 0.2s ease-out;
+		    			overflow: hidden;
+		    			.filter-item-group {
+		    				border-bottom: solid 1px #DEDEDE;
+		    				margin-bottom: 15px;
+		    				padding-bottom: 10px;
+		    				label {
+		    					display: block;
+							    margin-bottom: 10px;
+							    line-height: 1;
+							    font-weight: 700;
+							    &+label {
+							    	font-weight: 400;
+							    }
+							    [type=checkbox], [type=radio] {
+							    	margin-top: 1px;
+							    	margin-left: 10px;
+							    	vertical-align: top;
+							    }
+		    				}
+		    				.filter-item-scroll {
+		    					max-height: 350px;
+		    					overflow: hidden;
+		    					overflow-y: auto;
+		    					.fl-tag-input {
+		    						display: inline-block;
+		    						width: 100%;
+		    						padding: 4px 8px;
+		    						border: 1px solid #BEC0C2;
+		    						border-radius: 3px;
+		    						.input-tag {
+		    							font-size: 0.875rem;
+		    							display: inline-block;
+		    							float: right;
+		    							margin: 5px 4px 0 0;
+		    							padding: 4px;
+		    							border: 1px solid #DEDEDE;
+		    							border-radius: 3px;
+		    							line-height: 12px;
+		    							background-color: #fff;
+		    							.delete-tag {
+		    								display: inline-flex;
+		    								padding: 0 2px;
+		    								cursor: pointer;
+		    							}
+		    						}
+		    						[type=text] {
+		    							display: inline-block;
+		    							padding: 0;
+		    							border: none;
+		    							width: 100%;
+		    						}
+		    					}
+		    				}
+		    				.filter-item-button-group {
+		    					-webkit-box-align: start;
+		    					align-items: flex-start;
+		    					display: flex;
+		    					-webkit-box-orient: vertical;
+		    					-webkit-box-direction: normal;
+		    					flex-direction: column;
+		    				}
+	    					.filter-item-button {
+	    						margin-top: 16px;
+	    						&.btn-primary {
+	    							background-color: $primary;
+	    							color: $white;
+	    						}
+	    						a {
+	    							text-decoration: none;
+	    							color: $primary;
+	    							cursor: pointer;
+	    							transition: color 0.1s ease-out;
+	    							background-color: transparent;
+	    							font-size: 14px;
+	    						}
+	    					}
+		    				.fl-location {
+		    					.filter-item-location {
+		    						border: solid 1px #BEC0C2;
+		    						border-radius: 3px;
+		    						display: flex;
+		    						padding-right: 8px;
+		    						.search-input {
+		    							border: 0;
+		    							padding: 0;
+		    							width: 100%;
+		    						}
+		    					}
+	    						.btn {
+	    							border-bottom: 0;
+	    							border-bottom-right-radius: 0;
+	    							border-right: none;
+	    							border-top: none;
+	    							border-top-right-radius: 0;
+	    							padding: 8px 18px;
+	    							font-size: 0.875rem;
+	    							cursor: pointer;
+	    							display: inline-block;
+	    							line-height: 18px;
+	    							text-align: center;
+	    							font-weight: 700;
+									color: #4D525B;
+									background: linear-gradient(to bottom, #fff 0, #F0F0F0 100%);
+									border: solid 1px #BEC0C2;
+									text-shadow: 0 -1px transparent;
+	    							.Icon {
+	    								display: inline-block;
+	    								fill: #75787d;
+	    								vertical-align: middle;
+	    							}
+	    							.Icon-small .Icon-image {
+	    								width: 16px;
+	    								height: 16px;
+	    							}
+	    						}
+		    				}
+		    			}
+		    			.price-value {
+		    				width: 100%;
+		    				height: 30px;
+		    				text-align: center;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+		#new_skill:focus, #new_lang:focus {
+			outline: none;
+			border: none;
+		}
+	}
+}
+
+#mobile_filter {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #00000085;
+    z-index: 10000;
+    border: solid 1px;
+    display: none;
+    top: 0px;
+    padding: 15px 0;
+    overflow-y: auto;
+	&.open {
+		display: block;
+	}
+    .btn-close-filter {
+    	position: absolute;
+	    width: 30px;
+	    height: 30px;
+	    border: solid 1px $primary;
+	    color: $primary;
+	    background-color: $white;
+	    z-index: 10;
+	    border-radius: 50%;
+	    left: 0px;
+	    top: -10px;
+	    outline: none;
+    }
+}

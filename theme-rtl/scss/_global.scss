@@ -1,0 +1,132 @@
+// Global styling for this template
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+}
+
+// Typography
+.text-white-75 {
+  color: fade-out($white, .25);
+}
+
+// Custom horizontal rules
+hr.divider {
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: $primary;
+}
+
+hr.light {
+  border-color: $white;
+}
+
+// Button restyling
+.btn {
+  font-family: $font-family-sans-serif;
+}
+
+.btn:hover {
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+}
+
+.btn.disabled, .btn[disabled] {
+  background: -webkit-linear-gradient(top,#F0F0F0 0,#F0F0F0 100%);
+  background: linear-gradient(to bottom,#F0F0F0 0,#F0F0F0 100%);
+  border: 1px solid #BEC0C2;
+  color: #75787d !important;
+  font-weight: 700;
+  text-shadow: 0 -1px transparent;
+  cursor: not-allowed;
+  opacity: .5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+// Page section padding
+.page-section {
+  padding: 4rem 0;
+}
+
+.wb {
+  display: block !important;
+}
+
+.wb-inline {
+  display: inline-block;
+}
+
+.mb, .mb-inline {
+  display: none !important;
+}
+
+@include media-breakpoint-down(md) {
+  .wb, .wb-inline {
+    display: none !important;
+  }
+
+  .mb {
+    display: block !important;
+  }
+
+  .mb-inline {
+    display: inline-block;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .wb-lg {
+    display: none !important;
+  }
+  .mb-lg {
+    display: block !important;
+  }
+}
+
+.fl-right {
+  float: right;
+}
+
+.fl-left {
+  float: left;
+}
+
+.ft-20 {
+  font-size: 20px !important;
+}
+
+#btn-filter {
+  position: fixed;
+  top: 180px;
+  width: 40px;
+  height: 40px;
+  background: $primary;
+  padding: 10px 5px 10px 11px;
+  color: $white;
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border-radius: .25rem;
+}

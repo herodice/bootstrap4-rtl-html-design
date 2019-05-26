@@ -1,0 +1,132 @@
+#statistics {
+	padding: 2rem 0;
+	.SiteStat {
+		float: right;
+		.SiteStat-value {
+		    font-size: 24px;
+		    font-size: 1.5rem;
+		    line-height: 1.33;
+		    font-weight: 700;
+		    margin-bottom: 4px;
+		}
+		.SiteStat-name {
+		    font-size: 13px;
+		    font-size: .8125rem;
+		    line-height: 1.2;
+		    display: block;
+		    letter-spacing: 1px;
+		    text-transform: uppercase;
+		    .SiteStat-name-icon, .SiteStat-name-text {
+			    color: #BEC0C2;
+			    display: inline-block;
+			}
+		}
+	}
+	.Footer-appStoreIcons {
+		float: right;
+		display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: horizontal;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-flow: row wrap;
+	    -ms-flex-flow: row wrap;
+	    flex-flow: row wrap;
+
+	}
+	border-bottom: solid 1px #a6a6a6;
+}
+
+#reference {
+	padding: 2rem 0;
+	.Footer-linksTitle {
+	    font-size: 16px;
+	    font-size: 1rem;
+	    line-height: 1.5;
+	    margin-bottom: 16px;
+	    font-weight: 700;
+	    color: inherit;
+	    float: right;
+	    width: 100%;
+	    text-align: right;
+	}
+	.Footer-links {
+        margin-bottom: 0;
+	    float: right;
+	    list-style: none;
+	    text-align: right;
+	    padding-right: 0px;
+	    font-size: 14px
+	}
+}
+
+footer {
+	text-align: right;
+	.Grid--verticalCenter {
+	    -webkit-box-align: center;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    .Footer-locale {
+		    display: inline-block;
+		    -webkit-box-flex: 0;
+		    -webkit-flex: 0 1 70%;
+		    -ms-flex: 0 1 70%;
+		    flex: 0 1 70%;
+		    @include media-breakpoint-down(md) {
+				-webkit-box-flex: 0;
+			    -webkit-flex: 0 1 100%;
+			    -ms-flex: 0 1 100%;
+			    flex: 0 1 100%;
+		    }
+		    .Footer-localeSelector {
+			    margin-bottom: 0;
+			    .Footer-localeSelector-btn {
+				    border-color: #BEC0C2;
+				    color: #BEC0C2;
+				    .Footer-localeSelector-icon {
+					    fill: #BEC0C2;
+					}
+				}
+			}
+		}
+		.Footer-country {
+		    margin-bottom: 0;
+		    margin-top: 24px;
+		    -webkit-box-ordinal-group: 2;
+		    -webkit-order: 1;
+		    -ms-flex-order: 1;
+		    order: 1;
+		    .Footer-links {
+			    list-style: none;
+			    padding-right: 0px;
+			    .Footer-country-link {
+				    width: auto;
+				    margin-right: 16px;
+				    display: inline-block;
+				}
+		    }
+		}
+		.Footer-social {
+		    display: inline-block;
+		    -webkit-box-flex: 0;
+		    -webkit-flex: 0 1 30%;
+		    -ms-flex: 0 1 30%;
+		    flex: 0 1 30%;
+			@include media-breakpoint-down(md) {
+				-webkit-box-flex: 0;
+			    -webkit-flex: 0 1 100%;
+			    -ms-flex: 0 1 100%;
+			    flex: 0 1 100%;
+			    margin-top: 15px;
+			}
+		    .Footer-socialMediaIcon:not(:first-child) {
+			    margin-right: 16px;
+			}
+			.Footer-socialMediaIcon {
+			    fill: #BEC0C2;
+			}
+		}
+	}
+}

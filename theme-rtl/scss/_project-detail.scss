@@ -1,0 +1,654 @@
+.banner-section {
+	background-color: $black;
+	color: $white;
+	text-align: right;
+	height: 102px;
+	.ProjectViewHeader-primary {
+		padding-top: 20px;
+		.ProjectViewHeader-title {
+			display: inline-flex;
+			h1 {
+				font-size: 25px;
+				font-weight: 700;
+			}
+		}
+		.ProjectViewHeader-projectStatus {
+			display: inline-flex;
+			float: left;
+			color: $primary;
+			border: solid 2px $primary;
+			border-radius: 3px;
+			padding: 2px 5px;
+			font-size: 13px;
+		}
+	}
+	.ProjectViewHeader-secondary {
+		.ProjectViewHeader-tabs {
+			.TabList {
+				display: inline-flex;
+				margin: 0px;
+				padding: 0px;
+				color: $white;
+				border-bottom: solid 3px transparent;
+				.TabItem {
+					padding: 10px 10px 7px 10px;
+					color: $white;
+					text-decoration: none;
+					cursor: pointer;
+					&.active, &:hover {
+						color: $primary;
+						border-bottom: solid 3px $primary;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Main Section
+// -- details
+#details {
+	display: none;
+	&.active {
+		display: block;
+	}
+	.Card {
+		display: flex;
+	    flex-direction: column;
+	    background-color: $white;
+	    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+	    .CardHeader {
+	    	padding-left: 16px;
+    		padding-right: 16px;
+    		border-bottom: solid 2px #f0f0f0;
+    		max-height: 65px;
+    		.CardHeaderInner {
+    			padding-top: 12px;
+    			padding-bottom: 12px;
+    			h2 {
+    				font-size: 16px;
+    				font-weight: 700;
+    				color: #1f2836;
+    				text-align: right;
+    				margin: 0px;
+    				&.ft-20 {
+    					font-size: 20px;
+    					margin: 5px 0;
+    				}
+    			}
+    			.CardHeaderRight {
+					float: right;
+					h2 {
+						font-size: 20px;
+						line-height: 45px;
+						padding-bottom: 10px;
+					}
+    			}
+    			.CardHeaderLeft {
+					float: left;
+					.ProjectViewDetails-budget {
+						text-align: left;
+					}
+					.ProjectViewDetails-info {
+						display: inline-flex;
+						font-size: 11px;
+						max-height: 15px;
+						.IconContainer {
+							width: 13px;
+							height: 13px;
+							margin: 0 5px;
+						}
+					}
+    			}
+    		}
+	    }
+	    .CardBody {
+    	    padding: 16px;
+    	    .BitsListItem {
+    	    	h3 {
+    	    		font-size: 16px;
+				    text-align: right;
+				    font-weight: 700;
+				    margin-top: 20px;
+				    padding-right: 5px;
+    	    	}
+    	    	ul {
+		    	    padding: 0;
+				    margin: 0;
+				    list-style: none;
+				    text-align: right;
+				    font-size: 14px;
+				    font-weight: 400;
+				    li {
+				    	display: inline-flex;
+				    	padding-top: 3px;
+				    	padding-bottom: 3px;
+				    	width: 100%;
+				    	.IconContainer {
+				    		height: 16px;
+	    					width: 16px;
+	    					display: inline-block;
+	    					margin: 0 5px;
+	    					&.verified svg {
+	    						fill: $primary;
+	    					}
+				    	}
+				    	.FlagImageContainer {
+				    		width: 18px;
+				    		display: inline-block;
+				    	}
+				    	.Rating {
+				    		position: relative;
+	    					top: 0;
+	    					padding-left: 5px;
+	    					&::before {
+	    						content: attr(data-star_rating);
+	    						font-size: .875rem;
+							    line-height: 1.43;
+							    display: inline-block;
+							    font-weight: 400;
+							    vertical-align: middle;
+							    background-color: #f77d0e;
+							    border-radius: 2px;
+							    color: #fff;
+							    margin-right: 6px;
+							    padding: 1px 3px 0;
+	    					}
+	    					.Rating-total {
+	    						-webkit-box-align: center;
+							    -ms-flex-align: center;
+							    align-items: center;
+							    display: -webkit-inline-box;
+							    display: -ms-inline-flexbox;
+							    display: inline-flex;
+							    height: 16px;
+							    -webkit-box-pack: justify;
+							    -ms-flex-pack: justify;
+							    justify-content: space-between;
+							    margin-top: -2px;
+							    position: relative;
+							    width: 80px;
+	    						&.gold {
+									color: #f77d0e;
+	    						}
+	    					}
+				    	}
+				    	.BitsListItemText {
+							
+				    	}
+				    	.BitsListItemValue {
+							position: absolute;
+							left: 35px;
+				    	}
+				    }
+	    	    }
+    	    }
+    	    .project-description {
+				padding: 15px;
+				font-size: 15px;
+				font-weight: 400;
+    	    }
+    	    .project-skill {
+				padding: 0 15px;
+    	    }
+    	    .project-skill-group {
+				padding: 15px;
+				.tag-skill {
+					display: inline-flex;
+					padding: 2px 5px;
+					border-radius: 3px;
+					border: solid 1px;
+					margin-left: 5px;
+					font-size: 13px;
+					font-weight: 400;
+				}
+    	    }
+    	    .project-id {
+    	    	float: left;
+			    padding: 15px;
+			    font-size: 11px;
+    	    }
+
+    	    .attachments {
+    	    	width: 100%;
+    	    	margin: 0;
+    	    	hr {
+    	    		width: 100%;
+    	    	}
+    	    	h3 {
+    	    		font-size: 16px;
+				    font-weight: 700;
+				    display: block;
+				    width: 100%;
+				    text-align: right;
+    	    	}
+    	    	.attachments-files {
+    	    		display: inline-flex;
+    	    		.attachment-item {
+    	    			font-size: 13px;
+    	    			font-weight: 400;
+    	    			i {
+    	    				margin-left: 5px;
+    	    			}
+    	    		}
+    	    	}
+    	    }
+
+    	    .NativeElement {
+    	    	text-align: right;
+			    font-size: 15px;
+			    font-weight: 400;
+    	    }
+    	    .BidDetail {
+    	    	h3 {
+	    		    font-size: 20px;
+				    font-weight: 700;
+				    text-align: right;
+				    margin: 20px 0;
+    	    	}
+    	    	.BidFormInputGroup {
+    	    		display: inline-flex;
+    	    		float: right;
+    	    		@include media-breakpoint-down(md) {
+						display: block;
+    	    		}
+    	    		.BidFormInput {
+    	    			display: block;
+    	    			label {
+    	    				float: right;
+    	    				text-align: right;
+    	    				@include media-breakpoint-down(md) {
+								width: 100%;
+		    	    		}
+    	    			}
+    	    			.BidAmountInput {
+    	    				display: inline-flex;
+    	    				float: right;
+    	    				@include media-breakpoint-down(md) {
+								margin-bottom: 10px;
+		    	    		}
+    	    				.InputLabel {
+    	    					align-items: center;
+    							background: #f0f0f0;
+							    color: #75787d;
+							    display: flex;
+							    flex: 0 0 36px;
+							    height: 100%;
+							    justify-content: center;
+							    max-width: 100px;
+    	    				}
+    	    				.NativeElementContainer {
+    	    					padding: 2px 10px;
+	    					    border: solid 1px #bec0c2;
+	    					    input {
+	    					    	border: none;
+	    					    	outline: none;
+	    					    	@include media-breakpoint-down(sm) {
+	    					    		width: 130px;
+	    					    	}
+	    					    }
+    	    				}
+    	    				.BeforeLabel {
+    	    					    border-bottom-right-radius: 3px;
+								    border: 1px solid #bec0c2;
+								    border-top-right-radius: 3px;
+								    padding: 5px 20px;
+    	    				}
+    	    				.AfterLabel {
+								border-bottom-left-radius: 3px;
+							    border: 1px solid #bec0c2;
+							    border-top-left-radius: 3px;
+							    padding: 5px 10px;
+    	    				}
+    	    			}
+    	    		}
+    	    	}
+    	    	.BidFormProposal {
+    	    		h3 {
+						font-size: 16px;
+    	    		}
+    	    		#proposal {
+    	    			width: 100%;
+    	    		}
+    	    	}
+    	    	.milestone-title {
+    	    		font-size: 17px;
+    	    	}
+    	    	.MilestoneRequest {
+    	    		text-align: right;
+    	    		margin-bottom: 10px;
+    	    		.MilestoneRequest-description {
+						display: inline-flex;
+					    border: solid 1px #bec0c2;
+					    padding: 4px 10px;
+					    float: right;
+					    width: 65%;
+					    margin-left: 20px;
+					    border-radius: 3px;
+					    @include media-breakpoint-down(md) {
+					    	margin-bottom: 10px;
+					    }
+					    input {
+					    	border: none;
+					    	outline: none;
+					    	width: 100%;
+					    }
+    	    		}
+    	    		.MilestoneRequest-wrapper {
+						display: inline-flex;
+						width: 30%;
+    	    			.MilestoneRequest-amount {
+							display: inline-flex;
+							border: solid 1px #bec0c2;
+							width: 70%;
+							padding: 2px 10px;
+							input {
+								border: none;
+								outline: none;
+								width: 100%;
+							}
+    	    			}
+    	    			.InputLabel.BeforeLabel {
+						    border-bottom-right-radius: 3px;
+						    border: 1px solid #bec0c2;
+						    border-top-right-radius: 3px;
+						    padding: 5px 20px;
+					        -webkit-box-align: center;
+						    -ms-flex-align: center;
+						    align-items: center;
+						    background: #f0f0f0;
+						    color: #75787d;
+						    display: -webkit-box;
+						    display: -ms-flexbox;
+						    display: flex;
+						    -webkit-box-flex: 0;
+						    -ms-flex: 0 0 36px;
+						    flex: 0 0 36px;
+						    height: 100%;
+						    -webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						    justify-content: center;
+						    max-width: 100px;
+    	    			}
+    	    			.MilestoneRequest-remove {
+    	    				.remove-milestone {
+							    position: absolute;
+    	    					padding: 5px 5px;
+							    margin-top: 2px;
+							    cursor: pointer;
+							    &:hover {
+							    	color: $primary;
+							    }
+    	    				}
+    	    			}
+    	    		}
+    	    	}
+    	    	.milestone-button-wraper {
+    	    		text-align: right;
+	    			padding-top: 15px;
+    	    		.btn-add-milestone {
+    	    			display: block;
+					    border: solid 1px #bec0c2;
+					    border-radius: 3px;
+					    color: #75787d;
+					    font-size: 14px;
+					    padding: 3px 10px;
+					    font-weight: 700;
+					    outline: none;
+    	    		}
+    	    	}
+    	    	.sponsored-bid-form {
+    	    		.BitsListItemHeader {
+    	    			.sponsored-bid-check {
+	    	    			width: 20px;
+	    	    			height: 20px;
+	    	    			// border: solid 1px $primary;
+	    	    			border-radius: 3px;
+	    	    			display: inline-flex;
+	    	    			float: right;
+    	    			}
+	    	    		.Header {
+	    	    			display: inline-flex;
+	    	    			width: calc(100% - 40px);
+	    	    			@include media-breakpoint-down(md) {
+    	    					display: block;
+    	    				}
+		    	    		.CurrencyTagWrapper {
+	    	    				display: inline-flex;
+	    	    				width: 450px;
+	    	    				height:25px;
+	    	    				@include media-breakpoint-down(md) {
+	    	    					width: calc(100% - 40px);
+	    	    					height: fit-content;
+	    	    				}
+								.CurrencyWrapper {
+									display: inline-flex;
+									padding: 0 10px;
+								}
+								.CurrencyTagContainer {
+									display: inline-flex;
+									padding: 0 10px;
+									.sponsored-tag {
+										display: inline-flex;
+										background: #ffa500;
+									    height: fit-content;
+									    padding: 2px 10px;
+									    font-size: 14px;
+									    border-radius: 15px;
+									    color: $white;
+									}
+								}
+		    	    		}
+	    	    			.paragraph {
+							    font-size: 15px;
+							    font-weight: 400;
+							    text-align: right;
+							    @include media-breakpoint-down(md) {
+	    	    					width: 100%;
+	    	    					height: fit-content;
+	    	    					margin-top: 10px;
+	    	    				}
+	    	    			}
+	    	    		}
+    	    		}
+    	    		.btn-place-bid {
+    	    			display: block;
+					    border: solid 1px #bec0c2;
+					    border-radius: 3px;
+					    color: #75787d;
+					    font-size: 14px;
+					    padding: 3px 10px;
+					    font-weight: 700;
+					    margin: 20px;
+					    outline: none;
+    	    		}
+    	    	}
+    	    }
+	    }
+	}
+	#about_others {
+		.btn-bookmark {
+		    width: 100%;
+	    	background: #f7f7f7;
+    		border: solid 1px #bec0c2;
+    		.IconContainer {
+    			width: 22px;
+    			display: inline-block;
+    			&.active svg {
+					fill: $red;
+    			}
+    		}
+		}
+		.btn-report {
+			float: right;
+		    font-size: 13px;
+		    font-weight: 400;
+			color: $primary;
+		}
+	}
+}
+
+#proposals {
+	display: none;
+	&.active {
+		display: block;
+	}
+	.Card {
+		display: flex;
+	    flex-direction: column;
+	    background-color: $white;
+	    box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);
+	    padding: 20px;
+	    margin-bottom: 20px;
+	    .LeftColumnContainer {
+			text-align: left;
+			.DeliveryDate {
+				font-size: 14px;
+				font-weight: 400;
+			}
+			.verification-tag-group {
+				display: inline-flex;
+				padding: 10px 0;
+				.verification-tag {
+					display: inline-flex;
+					margin-right: 5px;
+				}
+			}
+	    }
+	    .UserInfoWrapper {
+			text-align: right;
+			.UserInfo-inner {
+				.UserAvatar {
+					display: inline-flex;
+				}
+				.UserInfo-details {
+					display: inline-block;
+					.UserInfo-personal {
+						
+						&.UserInfo-stats {
+							.rating {
+								.Tooltip {
+									.Rating {
+									    cursor: pointer;
+								        position: relative;
+										top: 0;
+										display: inline-block;
+										margin: 0 10px;
+										&::before {
+										    background-color: #f77d0e;
+										    content: attr(data-star_rating);
+									        font-size: .875rem;
+										    line-height: 1.43;
+										    display: inline-block;
+										    font-weight: 400;
+										    vertical-align: middle;
+										    border-radius: 2px;
+										    color: #fff;
+										    margin-right: 6px;
+										    padding: 1px 3px 0;
+										}
+										.Rating-total {
+											-webkit-box-align: center;
+										    -ms-flex-align: center;
+										    align-items: center;
+										    display: -webkit-inline-box;
+										    display: -ms-inline-flexbox;
+										    display: inline-flex;
+										    height: 16px;
+										    -webkit-box-pack: justify;
+										    -ms-flex-pack: justify;
+										    justify-content: space-between;
+										    margin-top: -2px;
+										    position: relative;
+										    width: 80px;
+											&.gold {
+												color: #f77d0e;
+											}
+										}
+									}
+								}
+							}
+							.earning {
+								display: inline-flex;
+								font-size: 15px;
+								font-weight: 400;
+								padding: 0 10px;
+								.earning-item {
+								    width: 7px;
+								    height: 15px;
+								    background-color: #a6a6a6;
+								    position: relative;
+								    margin: 3px 1px;
+								    border-radius: 2px;
+								    &.active {
+								    	background-color: $primary;
+								    }
+								}
+							}
+							.completion {
+								display: inline-flex;
+								font-size: 15px;
+								font-weight: 400;
+							}
+						}
+						.FlagIcon {
+							display: inline-flex;
+							padding: 0 5px;
+						}
+						.UserInfo-name {
+							display: inline-flex;
+
+						}
+						.UserInfo-username {
+							display: inline-flex;
+							font-size: 14px;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+			.Description {
+				font-size: 15px;
+				font-weight: 400;
+				text-align: right;
+				.Description-text {
+					height: auto;
+					&.ellipsis {
+						height: 65px;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: normal;
+					}
+
+				}
+				.toggle-more-less {
+					color: $primary;
+					font-size: 13px;
+					float: left;
+					cursor: pointer;
+				}
+			}
+	    }
+	}
+	.pagination-wrapper {
+		text-align: center;
+		ul {
+			list-style: none;
+			padding: 0px;
+			li {
+				display: inline-flex;
+				&.active, &:hover {
+					a {
+						background-color: $primary;
+						color: $white;
+					}
+				}
+				a {
+				    padding: 2px 10px;
+				    background-color: $white;
+				    border: solid 1px #a6a6a6
+				}
+			}
+		}
+	}
+}

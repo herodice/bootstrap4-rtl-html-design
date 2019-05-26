@@ -1,0 +1,261 @@
+// Base styling for the navbar
+#mainNav {
+  box-shadow: $box-shadow !important;
+  background-color: $white !important;
+  color: $black !important;
+  transition: background-color 0.2s ease;
+  height: 64px;
+  padding: 0;
+  position: relative;
+  .navbar-brand {
+    height: -webkit-fill-available;
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+    margin: 0;
+    padding: 15px 12px;
+    border-left: solid 1px $primary;
+    .LogoImg {
+      display: block;
+      margin: auto;
+    }
+    .Small {
+      height: 32px;
+    }
+  }
+  .navbar-nav {
+    &.pl-0 {
+      padding-left: 0;
+    }
+    &.pr-0 {
+      padding-right: 0;
+    }
+    &.mr-auto {
+      margin-right: auto;
+    }
+    .nav-item {
+      .nav-link {
+        color: $gray-600 !important;
+        font-family: $font-family-sans-serif;
+        font-weight: $font-weight-bold;
+        font-size: 0.9rem;
+        padding: 0.75rem 0;
+        &:hover,
+        &:active {
+          color: $primary !important;
+        }
+        &.active {
+          color: $primary !important;
+        }
+        .IconContainer {
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+        }
+        .UnreadIndicator {
+          background-color: #e91260;
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          border-radius: 50%;
+          margin-right: -25px;
+        }
+      }
+      .nav-button {
+        background: $primary;
+        color: $white;
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+      .nav-user-link {
+        // padding: 0 0.75rem;
+        .UserAvatar {
+          display: inline-flex;
+          height: -webkit-fill-available;
+          padding: 10px;
+          .AvatarImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: solid 1px;
+          }
+        }
+        .UserDetail {
+          display: inline-block;
+          padding: 8px;
+        }
+        .UserDetailIconContainer {
+          position: relative;
+          display: inline-block;
+          top: -10px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    // Base styling for the navbar - screen sizes greater than the large breakpoint
+    box-shadow: none;
+    background-color: transparent;
+    .navbar-brand {
+      color: fade-out($white, .3);
+      &:hover {
+        color: $white;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        height: -webkit-fill-available;
+        border-left: solid 1px $primary;
+        .nav-link {
+          color: fade-out($white, .3);
+          padding: 1.2rem 1rem;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+    // Navbar styling applied when the page is scrolled
+    &.navbar-scrolled {
+      box-shadow: $box-shadow;
+      background-color: $white;
+      .navbar-brand {
+        color: $gray-900;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $gray-900;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+  	position: absolute;
+  	right: 20px;
+  }
+
+  @include media-breakpoint-down(sm) {
+		.navbar-toggler {
+	  	position: absolute;
+	  	right: 10px;
+	  }
+  }
+
+  // mobile style
+  .navbar-mb {
+    width: 100%;
+    margin-right: 70px;
+  	.navbar-nav {
+  		padding: 0px;
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+  		.nav-item {
+  			display: inline-block;
+  			width: 23%;
+  			.nav-link {
+
+  			}
+  		}
+  	}
+  }
+}
+
+
+// Right Menu For Mobile
+#mob_navbar {
+	position: fixed;
+	width: 100%;
+	right: -100%;
+	z-index: 10000;
+	height: calc(100% - 64px);
+	top: 64px;
+	-webkit-transition: color .5s ease-out;
+  transition: color .5s ease-out;
+	&.active {
+		right: 0%;
+		-webkit-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+	}
+	.over-layer {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: #000000ad;
+	}
+	.right-menu {
+		position: absolute;
+		background-color: $white;
+		width: 230px;
+		height: 100%;
+		top: 0px;
+		right: 0px;
+		overflow-y: auto;
+		.user-card {
+			padding: 10px 20px;
+			float: right;
+			.user-avatar {
+		    display: inline-flex;
+    		margin-left: 20px;
+				.AvatarImg {
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					border: solid 1px $primary;
+				}
+			}
+			.user-info {
+				display: inline-block;
+				text-align: right;
+				.user-name {
+
+				}
+				.user-funds {
+
+				}
+			}
+		}
+		.button-group {
+			padding: 10px 20px;
+			.btn-post {
+				width: 100%;
+				cursor: pointer;
+			}
+		}
+		.nav-menu {
+			list-style: none;
+			text-align: right;
+			padding-right: 0px;
+			.nav-item {
+				padding: 10px;
+				color: #4d4d4d;
+				cursor: pointer;
+				padding: 0 10px;
+				&:last-child {
+					border-top: solid 2px #4d4d4d42;
+				}
+				&:hover {
+					color: $primary;
+				}
+				.nav-filter {
+					display: none;
+					@include media-breakpoint-down(sm) {
+						display: block;
+					}
+				}
+			}
+		}	
+	}
+}
