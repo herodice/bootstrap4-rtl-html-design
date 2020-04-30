@@ -32,7 +32,7 @@
         "@fortawesome/fontawesome-free": "5.8.1",
         "bootstrap": "4.3.1",
         "bootstrap-slider": "^10.6.1",
-        "jquery": "3.3.1",
+        "jquery": "3.5.0",
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0"
     },
